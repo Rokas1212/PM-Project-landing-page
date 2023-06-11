@@ -25,6 +25,12 @@
                 -ms-overflow-style: none;  /* IE and Edge */
                 scrollbar-width: none;  /* Firefox */
             }
+            
+            .prevent-select {
+              -webkit-user-select: none; /* Safari */
+              -ms-user-select: none; /* IE 10 and IE 11 */
+              user-select: none; /* Standard syntax */
+            }
 
             .navbar {
                 background-color: transparent;
@@ -45,15 +51,20 @@
                 margin-left: -31.419vw;
             } */
             p{
-                font-size: 2em;
+                font-size: 1.2em;
+                margin:0;
             }
             
-            p, h1{
+            p, h1, h2{
                 color: black;
+            }
+            h2{
+                text-align:center;
             }
             ul{
                display: flex;
                gap: 15px;
+               list-style-type: none;  
             }
             .swiper-slide {
                 position: relative;
@@ -87,18 +98,30 @@
                 position: absolute;
                 top: 0;
                 left: 0;
+                border: solid 2px;
+                border-radius: 2px;
             }
             
             .front {
                 z-index: 2;
                 transform: rotateY(0deg);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
             }
             
             .back {
                 transform: rotateY(180deg);
-                text-align: center;
+                text-align: justify;
+                color: black;
+                backdrop-filter: blur(5px);
+                padding: 10px;
+                font-size: 14px;
             }
-
+            #smaller{
+                font-size:12px;
+            }
             .swiper-slide img {
                 width: 100%;
                 height: 100%;
@@ -108,7 +131,9 @@
             .swiper-container {
                 padding: 0 40px; 
             }
-
+            img{
+                height: 321px !important;
+            }
             .swiper-button-next, .swiper-button-prev {
                 color: #000;
                 position: absolute;
@@ -150,159 +175,202 @@
                             <a class="nav-link text-secondary" href="https://ttokpm.com/about-us">About Us</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link text-secondary" href="https://ttokpm.com/index.php/project-initiation/">Project Initiation</a>
+                            <a class="nav-link text-secondary" href="https://ttokpm.com/index.php/project-initiation/">Project Identification</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link text-secondary" href="https://ttokpm.com/index.php/research/">Project Research</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link text-secondary" href="https://ttokpm.com/index.php/project-timeline/">Project Timeline</a>
+                            <a class="nav-link text-secondary" href="https://ttokpm.com/index.php/project-planning/">Project Planning</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link text-secondary" href="https://ttokpm.com/index.php/project-work-breakdown/">Project Work Breakdown</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link text-secondary" href="#">Project Planning</a>
+                            <a class="nav-link text-secondary" href="https://ttokpm.com/index.php/project-timeline/">Project Timeline</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link text-secondary" href="#">Project Budget</a>
+                            <a class="nav-link text-secondary" href="https://ttokpm.com/index.php/project-budget/">Project Budget</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link text-secondary" href="#">Project Stakeholders</a>
+                            <a class="nav-link text-secondary" href="https://ttokpm.com/index.php/project-stakeholders-2/">Project Stakeholders</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link text-secondary" href="#">Project Risks</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link text-secondary" href="#">Project Charter</a>
+                            <a class="nav-link text-secondary" href="https://ttokpm.com/index.php/project-risks/">Project Risks</a>
                         </li>
                     </ul>
                 </div>
             </nav>          
         </header>
         
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="flip-container">
-                            <div class="flipper">
-                                <div class="front">
-                                    <img src="http://ttokpm.com/wp-content/uploads/2023/05/chatgpt.gif" alt="ChatGPT Idea">
-                                </div>
-                                <div class="back">
-                                    <h1>Unveiling OpenAI's ChatGPT: The Future of Conversational AI</h1>
-                                    <p>Engage in an in-depth exploration of OpenAI's ChatGPT, a game-changer in the realm of conversational AI. Learn about its training process, human-like response generation, and vast capabilities through practical examples, and envision a future shaped by advanced language models.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="flip-container">
-                            <div class="flipper">
-                                <div class="front">
-                                    <img src="http://ttokpm.com/wp-content/uploads/2023/05/migration.gif" alt="Migration Idea">
-                                </div>
-                                <div class="back">
-                                    <h1>Website Migration to Hostinger</h1>
-                                    <p>Interested in switching to Hostinger after watching our informative videos? We've got you covered with a step-by-step guide on how to seamlessly migrate your website to our platform.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="flip-container">
-                            <div class="flipper">
-                                <div class="front">
+        <div class="swiper-container prevent-select">
+            <div class="swiper-wrapper prevent-select">
+                    <div class="swiper-slide prevent-select">
+                        <div class="flip-container prevent-select">
+                            <div class="flipper prevent-select">
+                                <div class="front prevent-select">
+                                    <h2>WordPress Plugin of the Week</h2>
                                     <img src="http://ttokpm.com/wp-content/uploads/2023/05/wordpress.gif" alt="WordPress idea">
                                 </div>
-                                <div class="back">
-                                    <h1>WordPress Plugin of the Week</h1>
-                                    <p>Dive into the world of WordPress plugins with us, as we explore and discuss the top five membership plugins featured in our YouTube Shorts video. Discover the unique features, benefits, and applications of each plugin, providing a comprehensive understanding to guide your website development journey.</p>
+                                <div class="back prevent-select">
+                                    <p>In this weekly TikTok video series, we uncover the most powerful and innovative WordPress plugins that can elevate your website's functionality and user experience. Covered plugins:</p>
+                                        <p>
+                                            Wordfence - Strong Firewall, Malware Scanner, Login Security, Threat Defense Feed.
+                                        </p>
+                                        <p>
+                                            WP forms - ultimate plugin for creating powerful and user-friendly forms on your WordPress website.
+
+                                        </p>
+                                        <p>
+                                            MonsterInsights - the must-have plugin for WordPress that brings powerful website analytics and insights.
+                                        </p>
+                                        <p>
+                                            Elementor - Drag-and-Drop Builder,  Pre-designed Templates, Advanced Widgets.
+
+                                        </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="flip-container">
-                            <div class="flipper">
-                                <div class="front">
+                    <div class="swiper-slide prevent-select">
+                        <div class="flip-container prevent-select">
+                            <div class="flipper prevent-select">
+                                <div class="front prevent-select">
+                                    <h2>TIPS & TRICKS</h2>
+                                    <img src="http://ttokpm.com/wp-content/uploads/2023/05/tipstricks.gif" alt="TipsNTricks Idea">
+                                </div>
+                                <div class="back prevent-select">
+                                    <p>A series of life hacks that various employees (Devs, designers, marketing) throughout the company use every day to make their work more efficient.</p>
+                                    <p>Other ideas:</p>
+                                    <ul>
+                                      <li><span style="font-weight: bold;">"Website Optimization Tricks": </span>Share quick tips on optimizing website speed, improving user experience, and boosting search engine rankings.</li>
+                                      <li><span style="font-weight: bold;">"Website Security Essentials": </span>Provide valuable insights into securing websites against cyber threats, including tips on using SSL certificates, strong passwords, and security plugins.</li>
+                                      <li><span style="font-weight: bold;">"Domain Name Hacks": </span>Showcase unique and creative domain name ideas, along with strategies for choosing the perfect domain name for your website or business.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide prevent-select">
+                        <div class="flip-container prevent-select">
+                            <div class="flipper prevent-select">
+                                <div class="front prevent-select">
+                                    <h2>Programming language in 60 seconds</h2>
+                                    <img src="http://ttokpm.com/wp-content/uploads/2023/05/bubble-gum-web-design.gif" alt="VPS">
+                                </div>
+                                <div class="back prevent-select">
+                                    <p>In this fast-paced TikTok video series, we dive into various programming languages and provide bite-sized insights to help you understand their key features, use cases, and popularity. Frameworks could also be covered: choosing between vast amount of JavaScript frameworks may be a problem.</p>
+                                    <p>JavaScript. Frameworks: AngularJS, React, Svelte, etc.</p>
+                                    <p>Python</p>
+                                    <p>PHP</p>
+                                    <p>Ruby</p>
+                                    <p>HTML/CSS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide prevent-select">
+                        <div class="flip-container prevent-select">
+                            <div class="flipper prevent-select">
+                                <div class="front prevent-select">
+                                    <h2>Enhancing Websites with Hostinger's Website Builder</h2>
                                     <img src="http://ttokpm.com/wp-content/uploads/2023/05/websitebuilder.gif" alt="WB builder idea">
                                 </div>
-                                <div class="back">
-                                    <h1>Enhancing Websites with Hostinger's Website Builder</h1>
+                                <div class="back prevent-select">
                                     <p> Witness the power of Hostinger's website builder as we highlight its features that can revolutionize your website creation process. Serving as a tutorial, we guide you through the tools and strategies for building fast, robust websites, making it an invaluable resource for novices and experienced developers alike.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="flip-container">
-                            <div class="flipper">
-                                <div class="front">
-                                    <img src="http://ttokpm.com/wp-content/uploads/2023/05/tipstricks.gif" alt="TipsNTricks Idea">
-                                </div>
-                                <div class="back">
-                                    <h1>Tips & Tricks</h1>
-                                    <p>Through a series of insightful videos, learn from our experienced team of developers, designers, and marketers as they share their everyday life hacks to boost work efficiency. Whether it's website optimization tricks, security essentials, or creative domain name hacks, we've got you covered with tips to supercharge your web presence.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="flip-container">
-                            <div class="flipper">
-                                <div class="front">
-                                    <img src="http://ttokpm.com/wp-content/uploads/2023/05/influencer.gif" alt="Influencer Idea">
-                                </div>
-                                <div class="back">
-                                    <h1>Influencer Collaboration</h1>
-                                    <p>Boost your views and engagement through collaboration videos featuring popular influencers. Recognizable faces add a touch of familiarity and increase viewer interest, making these videos a hit among the audience.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="flip-container">
-                            <div class="flipper">
-                                <div class="front">
+                    <div class="swiper-slide prevent-select">
+                        <div class="flip-container prevent-select">
+                            <div class="flipper prevent-select">
+                                <div class="front prevent-select">
+                                    <h2>AI LLM comparison</h2>
                                     <img src="http://ttokpm.com/wp-content/uploads/2023/05/ai.gif" alt="AI Idea">
                                 </div>
-                                <div class="back">
-                                    <h1>The Role of AI in Website Creation</h1>
-                                    <p>Step into the future of website design and functionality with our tutorial on AI implementation in website creation. In addition, we explore how to leverage the prowess of OpenAI's ChatGPT, illustrating effective ways to prompt it for optimal results.</p>
+                                <div class="back prevent-select">
+                                    <p>Comparing how different AI language models solve coding problems on LeetCode or HackerRank. AI models:</p>
+                                    <p>ChatGPT-3;</p>
+                                    <p>ChatGPT-4;</p>
+                                    <p>PaLM;</p>
+                                    <p>Bard.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="flip-container">
-                            <div class="flipper">
-                                <div class="front">
+                    <div class="swiper-slide prevent-select">
+                        <div class="flip-container prevent-select">
+                            <div class="flipper prevent-select">
+                                <div class="front prevent-select">
+                                    <h2>Exploring Trends in Website Creation</h2>
                                     <img src="http://ttokpm.com/wp-content/uploads/2023/05/devtrends.gif" alt="Web Dev Trends Idea">
                                 </div>
-                                <div class="back">
-                                    <h1>Exploring Trends in Website Creation</h1>
-                                    <p>Stay on top of the latest innovations in website creation as we delve into new tools, frameworks, languages, and features of Hostinger's website builder. By keeping up with these trends, you can ensure your website stands out in the digital landscape.</p>
+                                <div class="back prevent-select">
+                                    <p>New innovative tools used for website creation - new frameworks, languages.</p>
+                                    <p>Cover new or updated WordPress plugins.</p>
+                                    <p>Minimalist Design: Showcase the power of clean and minimalist designs that focus on simplicity, whitespace, and impactful typography.</p>
+                                    <p>Dark Mode: Highlight the increasing popularity of dark mode designs, exploring its benefits in terms of aesthetics, user experience, and energy efficiency.</p>
+                                    <p>AI-Powered Chatbots.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="flip-container">
-                            <div class="flipper">
-                                <div class="front">
-                                    <img src="http://ttokpm.com/wp-content/uploads/2023/05/bubble-gum-web-design.gif" alt="VPS">
+                    <div class="swiper-slide prevent-select">
+                        <div class="flip-container prevent-select">
+                            <div class="flipper prevent-select">
+                                <div class="front prevent-select">
+                                    <h2>Website Migration to Hostinger</h2>
+                                    <img src="http://ttokpm.com/wp-content/uploads/2023/05/migration.gif" alt="Migration Idea">
                                 </div>
                                 <div class="back">
-                                    <h1>Mastering VPS Hosting with Hostinger</h1>
-                                    <p>For those tech-savvy individuals out there, join us as we delve into the specifics of VPS hosting. From the pros and cons to the instances where it outperforms conventional web hosts, we break it down for you. We also introduce you to the basics of command line navigation in a VPS, perfect for those looking to expand their technical skills.</p>
+                                    <p>Step-by-step guide about migrating your website to Hostinger. Things to cover:</p>
+                                    <p>Pre-migration planning.</p>
+                                    <p>Choosing the right hosting plan.</p>
+                                    <p>Domain transfer.</p>
+                                    <p>Uploading files and databases.</p>
+                                    <p>Short tutorial about cPanel.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide prevent-select">
+                        <div class="flip-container prevent-select">
+                            <div class="flipper prevent-select">
+                                <div class="front prevent-select">
+                                    <h2>Unveiling OpenAI's ChatGPT</h2>
+                                    <img src="http://ttokpm.com/wp-content/uploads/2023/05/chatgpt.gif" alt="ChatGPT Idea">
+                                </div>
+                                <div class="back prevent-select">
+                                    <p>Engage in an in-depth exploration of OpenAI's ChatGPT, a game-changer in the realm of conversational AI. Learn about its training process, human-like response generation, and vast capabilities through practical examples, and envision a future shaped by advanced language models.</p>
+                                    <p>Covering tips for prompting ChatGPT the right way.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide prevent-select">
+                        <div class="flip-container prevent-select">
+                            <div class="flipper prevent-select">
+                                <div class="front prevent-select">
+                                    <h2>Influencer Collaboration</h2>
+                                    <img src="http://ttokpm.com/wp-content/uploads/2023/05/influencer.gif" alt="Influencer Idea">
+                                </div>
+                                <div class="back prevent-select">
+                                    <div id="smaller">
+                                        <p>Recognizable faces add a touch of familiarity and increase viewer interest, making these videos a hit among the audience.</p>
+                                        <p>Possible benefits of such video:</p>
+                                        <p><span style="font-weight: bold;">Reach: </span>The reach of a collaboration can range from a few thousands to few millions of potential impressions, depending on the influencer's engagement rate and visibility of the content. It's normal to achieve a reach of 500,000 to 1 million people with a macro influencer promotion.</p>
+                                        <p><span style="font-weight: bold;">Impressions: </span>The number of impressions can range from tens of thousands to several hundred thousand or even millions.</p>
+                                        <p><span style="font-weight: bold;">Engagement: </span>On average, an engagement rate of 2-5% is considered reasonable. So, for an influencer with 1 million followers, we can expect to receive anywhere from 20,000 to 50,000 engagements (likes, comments, shares, etc.).</p>
+                                        <p><span style="font-weight: bold;">Website Traffic and Conversions: </span>we could potentially experience thousands of visitors to our website which would lead to new Hostinger customers.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next prevent-select"></div>
+                <div class="swiper-button-prev prevent-select"></div>
         </div>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
